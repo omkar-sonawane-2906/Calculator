@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colors defined as RGB space-separated values for Tailwind opacity support */
+    --background: 248 250 252; /* slate-50: #f8fafc */
+    --foreground: 15 23 42; /* slate-900: #0f172a */
+    --surface: 255 255 255; /* white: #ffffff */
+    --surface-hover: 241 245 249; /* slate-100: #f1f5f9 */
+    --border: 226 232 240; /* slate-200: #e2e8f0 */
+    --muted: 241 245 249; /* slate-100 */
+    --muted-foreground: 100 116 139; /* slate-500: #64748b */
+  }
+
+  .dark {
+    --background: 2 6 23; /* slate-950: #020617 */
+    --foreground: 248 250 252; /* slate-50: #f8fafc */
+    --surface: 15 23 42; /* slate-900: #0f172a */
+    --surface-hover: 30 41 59; /* slate-800: #1e293b */
+    --border: 30 41 59; /* slate-800: #1e293b */
+    --muted: 15 23 42; /* slate-900 */
+    --muted-foreground: 148 163 184; /* slate-400: #94a3b8 */
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-accent selection:text-accent-foreground;
+  }
+}
+
+/* Glassmorphism Utilities */
+@layer utilities {
+  .glass-panel {
+    @apply bg-surface/70 backdrop-blur-xl border border-white/20 shadow-glass dark:bg-surface/50 dark:border-white/5 dark:shadow-glass-dark;
+  }
+}
