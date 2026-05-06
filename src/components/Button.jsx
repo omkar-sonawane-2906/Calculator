@@ -18,8 +18,8 @@ const Button = ({
   };
 
   const sizes = {
-    default: "h-14 w-full text-lg",
-    wide: "h-14 w-full text-lg col-span-2",
+    default: "h-12 sm:h-14 w-full text-base sm:text-lg",
+    wide: "h-12 sm:h-14 w-full text-base sm:text-lg col-span-2",
   };
 
   return (

@@ -125,6 +125,7 @@ export const useCalculatorLogic = () => {
     } else if (key === '^') {
       handleInput('^');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [equation, hasError]);
 
   useEffect(() => {

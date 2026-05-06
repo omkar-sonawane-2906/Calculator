@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '../utils';
 
-const Display = ({ equation, result, isDark }) => {
+const Display = ({ equation, result }) => {
   return (
     <div className="w-full flex flex-col items-end justify-between bg-surface/50 dark:bg-surface/30 p-6 rounded-2xl mb-6 shadow-inner border border-white/10 overflow-hidden h-32 relative">
       {/* Equation / Input String */}
